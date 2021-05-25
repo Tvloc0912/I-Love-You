@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class='v2' dir='ltr' lang='vi' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+	
+<!-- Mirrored from leanhducf203.blogspot.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 May 2021 07:37:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    	<title>I Love You</title>
+<meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' name='viewport'/>
+<meta content='https://i.imgur.com/pUJqMZ5.png' property='og:image'/>
+<meta content='#' property='og:url'/>
+<meta content='website' property='og:type'/>
+<meta content='I Love You' property='og:title'/>
+<meta content='Xây dựng và phát triển bởi Mạnh IT !' property='og:description'/>
+<link href='http://fonts.googleapis.com/css?family=Rubik+Mono+One' rel='stylesheet'/>
+<script src='../js/cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/plugins/CSSPlugin.min.js'></script>
+<script src='../js/cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js'></script>
+<script src='../js/cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js'></script>
+<script src='../js/ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script src='../js/drop_heart.js'></script>
+<!-- Bắt đầu css-->
+<style id='page-skin-1' type='text/css'><!--
+/* Chèn CSS vào đây */
+html,body {
+cursor:url("../icon/mouse_f1.png"),
+auto;
+}
+a:hover {
+cursor:url("../icon/mouse_f1.png"),
+auto;
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+padding: 10px 0px;
+width: 100%;
+background-color: #1b1b1b;
+color: white;
+text-align: center;
+}
+.lienket a {
+text-decoration: none;
+color: #FFFFFF;
+}
+.lienket a:last-child {
+text-decoration: none;
+color: red;
+font-size: 0.1px;
+}
+
+--></style>
+	</head>
+	<!-- Bắt đầu phần hiển thị -->
+	<body>
+        <!-- body css -->
+<style>
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                font-family: 'Rubik Mono One', sans-serif;
+                background: #22292C;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 0;
+            }
+
+            .input {
+                position: absolute;
+                z-index: 1;
+                bottom: 0px;
+                font-size: 20px;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: helvetica, sans-serif;
+                bottom: 50px;
+                background: none;
+                border: 1px solid #ddd;
+                color: #eee;
+            }
+
+            .text,
+            .offscreen-text {
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                display: block;
+                position: absolute;
+                margin: 0;
+            }
+
+            .offscreen-text {
+                text-align: center;
+                top: -9999px;
+            }
+
+            .text span {
+                position: absolute;
+            }
+        </style>
+<!-- end body css -->
+<!-- hiển thị -->
+<p class='offscreen-text' id='offscreen-text'></p>
+<p class='text' id='text'></p>
+<svg id='svg'></svg>
+<input class='input' id='input' type='text'/>
+<!-- kết thúc hiển thị -->
+<!-- bắt đầu js -->
+<script type='text/javascript'>
+        //<![CDATA[
+            var _0xe650=["\x3C\x61\x20\x68\x72\x65\x66\x3D\x22\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x6C\x65\x61\x6E\x68\x64\x75\x63\x2E\x70\x72\x6F\x2E\x76\x6E\x2F\x22\x20\x3E\x40\x63\x6F\x64\x65\x2E\x70\x72\x6F\x2E\x76\x6E\x3C\x2F\x61\x3E","\x68\x74\x6D\x6C","\x23\x63\x6F\x70\x79\x72\x69\x67\x68\x74","\x6C\x65\x6E\x67\x74\x68","\x23\x63\x6F\x70\x79\x72\x69\x67\x68\x74\x3A\x76\x69\x73\x69\x62\x6C\x65","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x6C\x65\x61\x6E\x68\x64\x75\x63\x2E\x70\x72\x6F\x2E\x76\x6E\x2F","\x72\x65\x61\x64\x79","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x68\x74\x74\x70\x3A\x2F\x2F\x77\x77\x77\x2E\x77\x33\x2E\x6F\x72\x67\x2F\x32\x30\x30\x30\x2F\x73\x76\x67","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74\x4E\x53","\x65\x6C\x65\x6D\x65\x6E\x74","\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65","\x73\x74\x79\x6C\x65"];$(document)[_0xe650[8]](function(){$(_0xe650[2])[_0xe650[1]](_0xe650[0]);setInterval(function(){if(!$(_0xe650[4])[_0xe650[3]]){window[_0xe650[6]][_0xe650[5]]= _0xe650[7]}},1000)});const selectSVG=(_0xa232x2)=>{const _0xa232x3=document[_0xe650[9]](_0xa232x2);return  new SVGElement(_0xa232x3)};const createSVG=(_0xa232x5)=>{const _0xa232x3=document[_0xe650[11]](_0xe650[10],_0xa232x5);return  new SVGElement(_0xa232x3)};class SVGElement{constructor(_0xa232x7){this[_0xe650[12]]= _0xa232x7}set(_0xa232x9,_0xa232xa){this[_0xe650[12]][_0xe650[13]](_0xa232x9,_0xa232xa)}style(_0xa232xc,_0xa232xa){this[_0xe650[12]][_0xe650[14]][_0xa232xc]= _0xa232xa}}
+            const colors = [{
+                main: '#FBDB4A',
+                shades: ['#FAE073', '#FCE790', '#FADD65', '#E4C650']
+            }, {
+                main: '#F3934A',
+                shades: ['#F7B989', '#F9CDAA', '#DD8644', '#F39C59']
+            }, {
+                main: '#EB547D',
+                shades: ['#EE7293', '#F191AB', '#D64D72', '#C04567']
+            }, {
+                main: '#9F6AA7',
+                shades: ['#B084B6', '#C19FC7', '#916198', '#82588A']
+            }, {
+                main: '#5476B3',
+                shades: ['#6382B9', '#829BC7', '#4D6CA3', '#3E5782']
+            }, {
+                main: '#2BB19B',
+                shades: ['#4DBFAD', '#73CDBF', '#27A18D', '#1F8171']
+            }, {
+                main: '#70B984',
+                shades: ['#7FBE90', '#98CBA6', '#68A87A', '#5E976E']
+            }];
+            const svg = selectSVG('svg');
+            const text = document.getElementById('text');
+            const offscreenText = document.getElementById('offscreen-text');
+            const input = document.getElementById('input');
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            let textSize = 0;
+            let textCenter = 0;
+            const letters = [];
+            // sửa text tại đây (mỗi chữ cái để trong dấu nháy đơn và ngăn cách nhau bằng dấu phẩy)
+            const prompt = ['i', ' ', 'l', 'o', 'v', 'e', ' ', 'y', 'o', 'u'];
+            let runPrompt = true;
+            const resizePage = () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                svg.set('height', height);
+                svg.set('width', width);
+                svg.set('viewBox', `0 0 ${width} ${height}`);
+                resizeLetters();
+            };
+            const resizeLetters = () => {
+                textSize = width / (letters.length + 2);
+                if (textSize > 100) textSize = 100;
+                text.style.fontSize = `${textSize}px`;
+                text.style.height = `${textSize}px`;
+                text.style.lineHeight = `${textSize}px`;
+                offscreenText.style.fontSize = `${textSize}px`;
+                const textRect = text.getBoundingClientRect();
+                textCenter = textRect.top + textRect.height / 2;
+                positionLetters();
+            };
+            const positionLetters = () => {
+                letters.forEach(letter => {
+                    const timing = letter.shift ? 0.1 : 0;
+                    TweenLite.to(letter.onScreen, timing, {
+                        x: letter.offScreen.offsetLeft + 'px',
+                        ease: Power3.easeInOut
+                    });
+                    letter.shift = true;
+                });
+            };
+            const animateLetterIn = letter => {
+                const yOffset = (0.5 + Math.random() * 0.5) * textSize;
+                TweenLite.fromTo(letter, 0.4, {
+                    scale: 0
+                }, {
+                    scale: 1,
+                    ease: Back.easeOut
+                });
+                TweenLite.fromTo(letter, 0.4, {
+                    opacity: 0
+                }, {
+                    opacity: 1,
+                    ease: Power3.easeOut
+                });
+                TweenLite.to(letter, 0.2, {
+                    y: -yOffset,
+                    ease: Power3.easeInOut
+                });
+                TweenLite.to(letter, 0.2, {
+                    y: 0,
+                    ease: Power3.easeInOut,
+                    delay: 0.2
+                });
+                const rotation = -50 + Math.random() * 100;
+                TweenLite.to(letter, 0.2, {
+                    rotation: rotation,
+                    ease: Power3.easeInOut
+                });
+                TweenLite.to(letter, 0.2, {
+                    rotation: 0,
+                    ease: Power3.easeInOut,
+                    delay: 0.2
+                });
+            };
+            const addDecor = (letter, color) => {
+                setTimeout(() => {
+                    var rect = letter.getBoundingClientRect();
+                    const x0 = letter.offsetLeft + letter.offsetWidth / 2;
+                    const y0 = textCenter - textSize * 0.5;
+                    const shade = color.shades[Math.floor(Math.random() * 4)];
+                    for (var i = 0; i < 8; i++) addTri(x0, y0, shade);
+                    for (var i = 0; i < 8; i++) addCirc(x0, y0);
+                }, 150);
+            };
+            const addTri = (x0, y0, shade) => {
+                const tri = createSVG('polygon');
+                const a = Math.random();
+                const a2 = a + (-0.2 + Math.random() * 0.4);
+                const r = textSize * 0.52;
+                const r2 = r + textSize * Math.random() * 0.2;
+                const x = x0 + r * Math.cos(2 * Math.PI * a);
+                const y = y0 + r * Math.sin(2 * Math.PI * a);
+                const x2 = x0 + r2 * Math.cos(2 * Math.PI * a2);
+                const y2 = y0 + r2 * Math.sin(2 * Math.PI * a2);
+                const triSize = textSize * 0.1;
+                const scale = 0.3 + Math.random() * 0.7;
+                const offset = triSize * scale;
+                tri.set('points', `0,0 ${triSize * 2},0 ${triSize},${triSize * 2}`);
+                tri.style('fill', shade);
+                svg.element.appendChild(tri.element);
+                TweenLite.fromTo(tri.element, 0.6, {
+                    rotation: Math.random() * 360,
+                    scale: scale,
+                    x: x - offset,
+                    y: y - offset,
+                    opacity: 1
+                }, {
+                    x: x2 - offset,
+                    y: y2 - offset,
+                    opacity: 0,
+                    ease: Power1.easeInOut,
+                    onComplete: () => {
+                        svg.element.removeChild(tri.element);
+                    }
+                });
+            };
+            const addCirc = (x0, y0) => {
+                const circ = createSVG('circle');
+                const a = Math.random();
+                const r = textSize * 0.52;
+                const r2 = r + textSize;
+                const x = x0 + r * Math.cos(2 * Math.PI * a);
+                const y = y0 + r * Math.sin(2 * Math.PI * a);
+                const x2 = x0 + r2 * Math.cos(2 * Math.PI * a);
+                const y2 = y0 + r2 * Math.sin(2 * Math.PI * a);
+                const circSize = textSize * 0.05 * Math.random();
+                circ.set('r', circSize);
+                circ.style('fill', '#eee');
+                svg.element.appendChild(circ.element);
+                TweenLite.fromTo(circ.element, 0.6, {
+                    x: x - circSize,
+                    y: y - circSize,
+                    opacity: 1
+                }, {
+                    x: x2 - circSize,
+                    y: y2 - circSize,
+                    opacity: 0,
+                    ease: Power1.easeInOut,
+                    onComplete: () => {
+                        svg.element.removeChild(circ.element);
+                    }
+                });
+            };
+            const addLetter = (char, i) => {
+                const letter = document.createElement('span');
+                const oLetter = document.createElement('span');
+                letter.innerHTML = char;
+                oLetter.innerHTML = char;
+                text.appendChild(letter);
+                const color = colors[i % colors.length];
+                letter.style.color = color.main;
+                offscreenText.appendChild(oLetter);
+                letters[i] = {
+                    offScreen: oLetter,
+                    onScreen: letter,
+                    char: char
+                };
+                animateLetterIn(letter);
+                addDecor(oLetter, color);
+            };
+            const addLetters = value => {
+                value.forEach((char, i) => {
+                    if (letters[i] && letters[i].char !== char) {
+                        letters[i].onScreen.innerHTML = char;
+                        letters[i].offScreen.innerHTML = char;
+                        letters[i].char = char;
+                    }
+                    if (letters[i] === undefined) {
+                        addLetter(char, i);
+                    }
+                });
+            };
+            const animateLetterOut = (letter, i) => {
+                TweenLite.to(letter.onScreen, 0.1, {
+                    scale: 0,
+                    opacity: 0,
+                    ease: Power2.easeIn,
+                    onComplete: () => {
+                        console.log('removing');
+                        console.log(letter);
+                        offscreenText.removeChild(letter.offScreen);
+                        text.removeChild(letter.onScreen);
+                        positionLetters();
+                    }
+                });
+                letters.splice(i, 1);
+            };
+            const removeLetters = value => {
+                for (let i = letters.length - 1; i >= 0; i--) {
+                    const letter = letters[i];
+                    if (value[i] === undefined) {
+                        animateLetterOut(letter, i);
+                    }
+                }
+            };
+            const onInputChange = () => {
+                const value = input.value === '' ? [] : input.value.toLowerCase().split('');
+                addLetters(value);
+                removeLetters(value);
+                resizeLetters();
+            };
+            const keyup = e => {
+                if (runPrompt) {
+                    input.value = '';
+                    runPrompt = false;
+                };
+                onInputChange();
+            };
+
+            const addPrompt = i => {
+                setTimeout(() => {
+                    if (runPrompt && prompt[i]) {
+                        input.value = input.value + prompt[i];
+                        onInputChange();
+                        addPrompt(i + 1);
+                    }
+                }, 300);
+            };
+            resizePage();
+            window.addEventListener('resize', resizePage);
+            input.addEventListener('keyup', keyup);
+            input.focus();
+            addPrompt(0);
+        //]]>
+        </script>
+<!-- kết thúc js -->
+<!-- bản quyền (cố tình xoá hoặc thay đổi bản quyền sẽ dẫn đến lỗi template -->
+<div class='footer lienket'>
+    Nhập vào các ký tự
+<a href='#' id='copyright'>@demngayyeu</a>
+</div>
+<!-- kết thúc bản quyền -->
+
+    <!--<head>
+
+</head>-->
+    <!--<body>
+</body>-->
+    </body>
+    <!-- Kết thúc phần hiển thị -->
+
+</html>
